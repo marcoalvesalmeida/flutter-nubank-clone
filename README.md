@@ -1,4 +1,4 @@
-# first_flutter
+# Flutter Nubank Clone
 
 A new Flutter project.
 
