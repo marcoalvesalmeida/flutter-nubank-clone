@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Nubank',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+         brightness: Brightness.dark,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),

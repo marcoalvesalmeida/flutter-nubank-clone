@@ -1,5 +1,6 @@
 import 'package:first_flutter/pages/home/widgets/my_app_bar.dart';
 import 'package:first_flutter/pages/home/widgets/my_dots_app.dart';
+import 'package:first_flutter/pages/home/widgets/my_menu_app.dart';
 import 'package:first_flutter/pages/home/widgets/page_view_app.dart';
 import 'package:flutter/material.dart';
 
@@ -35,9 +36,14 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               setState(() {
                 _showMenu = !_showMenu;
-                _yPosition = !_showMenu ? _screenHeigth * .24 : _screenHeigth * .75;
+                _yPosition =
+                    !_showMenu ? _screenHeigth * .24 : _screenHeigth * .75;
               });
             },
+          ),
+          MyMenuApp(
+            top: _screenHeigth * .20,
+            showMenu: _showMenu,
           ),
           PageViewApp(
             showMenu: _showMenu,
@@ -50,7 +56,8 @@ class _HomePageState extends State<HomePage> {
             onPanUpdate: (details) {
               double positionBottomLimit = _screenHeigth * .75;
               double positionTopLimit = _screenHeigth * .24;
-              double midlePosition = (positionBottomLimit - positionTopLimit) / 2;
+              double midlePosition =
+                  (positionBottomLimit - positionTopLimit) / 2;
               setState(() {
                 _yPosition += details.delta.dy;
 
@@ -84,6 +91,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MyDotsApp(
+            showMenu: _showMenu,
             top: _screenHeigth * .80,
             currentIndex: _currentIndex,
           ),
