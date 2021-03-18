@@ -29,8 +29,10 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-        backgroundColor: Colors.purple[800],
-        body: Stack(alignment: Alignment.topCenter, children: [
+      backgroundColor: Colors.purple[800],
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: [
           MyAppBar(
             showMenu: _showMenu,
             onTap: () {
@@ -95,6 +97,8 @@ class _HomePageState extends State<HomePage> {
             top: _screenHeigth * .80,
             currentIndex: _currentIndex,
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }

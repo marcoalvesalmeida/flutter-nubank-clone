@@ -1,3 +1,4 @@
+import 'package:first_flutter/pages/home/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
 
 class MyMenuApp extends StatelessWidget {
@@ -78,6 +79,66 @@ class MyMenuApp extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Column(
+                    children: [
+                      ItemMenu(
+                        icon: Icons.info_outline,
+                        text: 'Me ajuda',
+                      ),
+                      ItemMenu(
+                        icon: Icons.person_outline,
+                        text: 'Perfil',
+                      ),
+                      ItemMenu(
+                        icon: Icons.settings,
+                        text: 'Configurar conta',
+                      ),
+                      ItemMenu(
+                        icon: Icons.credit_card,
+                        text: 'Configurar cartão',
+                      ),
+                      ItemMenu(
+                          icon: Icons.store_mall_directory,
+                          text: 'Pedir conta PJ'),
+                      ItemMenu(
+                          icon: Icons.phone_android,
+                          text: 'Configurações do app'),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Container(
+                        height: 40,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 0.7, color: Colors.white54),
+                        ),
+                        child: RaisedButton(
+                          color: Colors.purple[800],
+                          highlightColor: Colors.transparent,
+                          elevation: 0,
+                          disabledElevation: 0,
+                          focusElevation: 0,
+                          highlightElevation: 0,
+                          hoverElevation: 0,
+                          splashColor: Colors.purple[900],
+                          child: Text(
+                            'SAIR DO APP',
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
