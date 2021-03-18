@@ -1,8 +1,11 @@
+import 'package:first_flutter/pages/home/widgets/item_menu_bottom.dart';
 import 'package:first_flutter/pages/home/widgets/my_app_bar.dart';
 import 'package:first_flutter/pages/home/widgets/my_dots_app.dart';
 import 'package:first_flutter/pages/home/widgets/my_menu_app.dart';
+import 'package:first_flutter/pages/home/widgets/my_menu_bottom.dart';
 import 'package:first_flutter/pages/home/widgets/page_view_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -96,6 +99,9 @@ class _HomePageState extends State<HomePage> {
             showMenu: _showMenu,
             top: _screenHeigth * .80,
             currentIndex: _currentIndex,
+          ),
+          MyMenuBottom(
+            showMenu: _showMenu,
           ),
         ],
       ),
