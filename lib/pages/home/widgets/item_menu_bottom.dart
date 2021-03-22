@@ -11,7 +11,7 @@ class ItemMenuBottom extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(9),
       child: Container(
-        width: _screenWidth * .21,
+        width: _screenWidth * .24,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: Colors.white24,
