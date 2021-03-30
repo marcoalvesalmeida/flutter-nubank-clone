@@ -1,4 +1,3 @@
-import 'package:first_flutter/pages/home/widgets/item_menu_bottom.dart';
 import 'package:first_flutter/pages/home/widgets/my_app_bar.dart';
 import 'package:first_flutter/pages/home/widgets/my_dots_app.dart';
 import 'package:first_flutter/pages/home/widgets/my_menu_app.dart';
@@ -50,6 +49,9 @@ class _HomePageState extends State<HomePage> {
             top: _screenHeigth * .20,
             showMenu: _showMenu,
           ),
+          MyMenuBottom(
+            showMenu: _showMenu,
+          ),
           PageViewApp(
             showMenu: _showMenu,
             top: _yPosition,
@@ -99,9 +101,6 @@ class _HomePageState extends State<HomePage> {
             showMenu: _showMenu,
             top: _screenHeigth * .80,
             currentIndex: _currentIndex,
-          ),
-          MyMenuBottom(
-            showMenu: _showMenu,
           ),
         ],
       ),

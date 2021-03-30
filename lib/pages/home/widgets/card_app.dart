@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CardApp extends StatelessWidget {
-  final String title;
+  final Widget child;
 
-  const CardApp({Key key, this.title}) : super(key: key);
+  const CardApp({Key key, this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,10 +14,7 @@ class CardApp extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Text(
-          title,
-          style: TextStyle(fontSize: 30),
-        ),
+        child: child,
       ),
     );
   }
